@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Management</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
 </head>
 
 <body>
-    <div class="tab-pane fade show active " style="height: 80vh;" id="userList">
-        <h3>User</h3>
-        
-        <table class="table table-hover ">
+    <h2>User</h2>
+    <div class="tab-pane fade show active userview " style="height: 80vh;" id="userList">
+        <table class="table custom-table" >
             <thead>
                 <tr>
                     <th>User-Name</th>

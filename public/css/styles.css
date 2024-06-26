@@ -1,0 +1,36 @@
+.btn {
+    background-color: #d62300;
+    color: #f4f0ec;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #f0e6d7;
+  }
+h2 {
+    font-size: 2em;
+    margin-bottom: 5vh;
+    color: #885133;
+    display: flex;
+    justify-content: center;
+
+}
+.nav-link {
+    color: #885133 !important;
+}
+
+.table{
+    border: #885133;
+
+}
+.custom-table{
+    width: auto;
+    overflow-y: auto;
+}
+.userview{
+    display: flex;
+    justify-content: center;
+}

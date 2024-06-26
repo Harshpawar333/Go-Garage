@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Garage</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
 </head>
 
 <body>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -26,7 +26,7 @@
     <div class="container mt-5 ">
         <h2>Go Garage</h2>
 
-        <ul class="nav nav-tabs" id="myTab">
+        <ul class="nav nav-tabs text-primary" id="myTab">
             <li class="nav-item">
                 <a class="nav-link active" id="userList-tab" data-toggle="tab" href="/">User Management</a>
             </li>
@@ -39,7 +39,7 @@
             <div class="tab-pane fade show active overflow-scroll" style="height: 80vh; overflow-y: auto;"
                 id="userList">
                 <h3>User List</h3>
-                <button id="showCreateUserForm" class="btn btn-primary mb-3">Create New User</button>
+                <button id="showCreateUserForm" class="btn mb-3">Create New User</button>
                 <table class="table table-hover ">
                     <thead>
                         <tr>
@@ -87,10 +87,10 @@
             </div>
             <div class="tab-pane fade" id="carManagement">
                 <div class="container mt-5">
-                    <button class="btn btn-primary mb-3" id="carlistbtn">Car List</button>
-                    <button class="btn btn-primary mb-3" id="servicelistbtn">Servicing List</button>
-                    <button class="btn btn-primary mb-3" id="caraddbtn">Add New Car</button>
-                    <button class="btn btn-primary mb-3" id="addservicebtn">Add Servicing Record</button>
+                    <button class="btn mb-3" id="carlistbtn">Car List</button>
+                    <button class="btn mb-3" id="servicelistbtn">Servicing List</button>
+                    <button class="btn mb-3" id="caraddbtn">Add New Car</button>
+                    <button class="btn mb-3" id="addservicebtn">Add Servicing Record</button>
                 </div>
                 <div class="tab-pane fade show active"style="height: 60vh; overflow-y: auto;" id="carList">
                     <h3>Car List</h3>
@@ -170,7 +170,7 @@
                             <label for="date">Date</label>
                             <input type="date" class="form-control date" id="date" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add User</button>
+                        <button type="submit" class="btn ">Add User</button>
                         <button id="cancelCreateUserForm" type="button" class="btn btn-secondary">Cancel</button>
                     </form>
                     <div id="successMessagecar" class="alert alert-success" style="display: none; margin-top: 10px;">
@@ -202,7 +202,7 @@
                             <label for="date">Date</label>
                             <input type="date" class="form-control date" id="date" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add Servicing</button>
+                        <button type="submit" class="btn ">Add Servicing</button>
                         <button id="cancelCreateUserForm" type="button" class="btn btn-secondary">Cancel</button>
                     </form>
                 </div>
