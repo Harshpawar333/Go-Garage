@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('serviceList').style.display = 'none';
         document.getElementById('createCarForm').style.display = 'none';
         document.getElementById('createServiceForm').style.display = 'none';
-        document.getElementById('createUserForm').style.display = 'none'; // Ensure this is here
+        document.getElementById('createUserForm').style.display = 'none'; 
         document.getElementById('authuser').style.display = 'none';
         document.getElementById('userList').style.display = 'block';
         document.getElementById('userList-tab').classList.add('active');
