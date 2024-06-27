@@ -5,9 +5,6 @@ use App\Http\Controllers\CarController;
 
 Route::get('/', [CarController::class, 'index']);
 
-Route::get('/carmanagement', function () {
-    return view('car-management');
-});
 
 Route::get('/usermanagement', [CarController::class, 'userList'])->name('user.list');
 

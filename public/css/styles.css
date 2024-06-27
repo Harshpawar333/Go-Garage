@@ -28,7 +28,6 @@ h2 {
 }
 .custom-table{
     width: auto;
-    overflow-y: auto;
 }
 .userview{
     display: flex;

@@ -50,14 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('userForm').addEventListener('submit', async function(event) {
         event.preventDefault();
-        const phone = parseInt(document.getElementById('phone').value);
+        const phone = document.getElementById('phone').value.trim();
+        
         const userdata = await axios.get("https://apicars.prisms.in//user/getall");
         document.getElementById('authuser').style.display = 'none ';
 
         const userauth1 = userdata.data.Users.find(
             user => user.phone_no === phone)
         console.log(userauth1)
-        if (!userauth1) {
+        console.log(phone)
+        if (userauth1) {
             document.getElementById('authuser').style.display = 'block ';
             document.getElementById('userForm').reset();
             return;
@@ -98,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(userdata);
         if (!userauth) {
             document.getElementById('auth').style.display = 'block ';
+            document.getElementById('userForm').reset();
+
             return;
         } else {
             console.log(document.getElementById('carid').value)
@@ -149,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(function() {
                     document.getElementById('successMessageservice').style.display =
                         'none';
-                    fetchServiceData()
                     document.getElementById('serviceList').style.display = 'block';
                     document.getElementById('createServiceForm').style.display = 'none';
 
@@ -168,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('userList-tab').classList.remove('active');
         document.getElementById('carManagement').classList.add('show', 'active');
         document.getElementById('carList-tab').classList.add('active');
-        document.getElementById('createUserForm').style.display = 'none';
+        document.getElementById('createUserForm').style.display = 'none'; 
         document.getElementById('serviceList').style.display = 'none';
         document.getElementById('createCarForm').style.display = 'none';
         document.getElementById('createServiceForm').style.display = 'none';
@@ -178,15 +181,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('userList-tab').addEventListener('click', function() {
+        document.getElementById('carList').style.display = 'none';
+        document.getElementById('serviceList').style.display = 'none';
+        document.getElementById('createCarForm').style.display = 'none';
+        document.getElementById('createServiceForm').style.display = 'none';
+        document.getElementById('createUserForm').style.display = 'none'; // Ensure this is here
+        document.getElementById('authuser').style.display = 'none';
         document.getElementById('userList').style.display = 'block';
         document.getElementById('userList-tab').classList.add('active');
-        document.getElementById('carManagement').classList.remove('show', 'active');
-        document.getElementById('carList-tab').classList.remove('active');
-        document.getElementById('createServicerForm').style.display = 'none';
-        document.getElementById('createUserForm').style.display = 'none';
-        document.getElementById('createCarForm').style.display = 'none';
-
-
+    document.getElementById('carList-tab').classList.remove('active');
+    document.getElementById('carManagement').classList.remove('show', 'active');
+        
     });
 
 });
